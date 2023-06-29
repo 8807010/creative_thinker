@@ -19,10 +19,10 @@ body {
 }
 
 body {
-  color: #000;
+  color: #1f2937;
   line-height: 1;
   font-family: "Inter";
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -98,7 +98,7 @@ h6 {
 Снипет (HTML): cnt
 */
 [class*=__container] {
-  max-width: 73.125rem;
+  max-width: 73.75rem;
   box-sizing: content-box;
   margin: 0 auto;
   padding: 0 0.9375rem;
