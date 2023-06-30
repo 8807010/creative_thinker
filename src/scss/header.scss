@@ -78,6 +78,10 @@
       padding: 0 rem(15) rem(30);
       transition: left 0.3s ease 0s;
 
+      ._header-scroll & {
+        padding-top: rem(120);
+      }
+
       &::before {
         content: "";
         position: fixed;
@@ -87,6 +91,10 @@
         transition: left 0.3s ease 0s;
         top: 0;
         background-color: #77768b;
+
+        ._header-scroll & {
+          min-height: rem(80);
+        }
       }
 
       .menu-open & {
