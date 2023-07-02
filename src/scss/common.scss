@@ -1,1 +1,13 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  margin: 0px auto;
+  max-width: rem(1020);
+  @include adaptiveValue("font-size", 48, 28);
+
+  span {
+    color: $indigo;
+  }
+}

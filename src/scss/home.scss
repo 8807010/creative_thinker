@@ -224,4 +224,116 @@
   }
 }
 
+//========================================================================================================================================================
+.gallery {
+  @include adaptiveValue("padding-top", 100, 30);
+  @include adaptiveValue("padding-bottom", 75, 30);
+
+  // .gallery__container
+  &__container {}
+
+  // .gallery__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 150, 30);
+  }
+
+  // .gallery__items
+  &__items {
+    display: grid;
+    gap: rem(30);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .gallery__item
+  &__item {}
+}
+
+.item-gallery {
+  position: relative;
+
+  &_row-2 {
+    grid-row: span 2;
+  }
+
+  &_col-2 {
+    @media (min-width: $mobile) {
+      grid-column: span 2;
+
+      .item-gallery__image-ibg {
+        padding: 0px 0px percent(400, 1180) 0px;
+      }
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .item-gallery__content {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  // .item-gallery__image-ibg
+  &__image-ibg {
+    padding: 0px 0px percent(464, 620) 0px;
+    height: 100%;
+
+    @media (max-width: $mobile) {
+      padding: 0px 0px percent(620, 620) 0px;
+    }
+  }
+
+  // .item-gallery__content
+  &__content {
+    position: absolute;
+    padding: rem(20);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+
+    .touch & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // .item-gallery__body
+  &__body {
+    background-color: #fff;
+    padding: rem(25) rem(60) rem(25) rem(25);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: rem(25);
+      top: 50%;
+      transform: translate(0, -50%);
+      background: url("@img/icons/arrow.svg") 0 0 / 100% no-repeat;
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+
+  // .item-gallery__title
+  &__title {
+    font-weight: 500;
+    line-height: math.div(28, 18);
+  }
+
+  // .item-gallery__text
+  &__text {
+    color: $grey;
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+  }
+}
+
 //====================================================================================================
