@@ -100,9 +100,6 @@
   @include adaptiveValue("padding-top", 100, 30);
   @include adaptiveValue("padding-bottom", 150, 30);
 
-  // .services__container
-  &__container {}
-
   // .services__title
   &__title {
     @include adaptiveValue("margin-bottom", 150, 30);
@@ -142,9 +139,6 @@
       padding: 0 0 rem(20) 0;
     }
   }
-
-  // .services__item
-  &__item {}
 }
 
 .item-services {
@@ -194,9 +188,6 @@
   @include adaptiveValue("padding-bottom", 100, 30);
   background: #fef2f2;
 
-  // .clients__container
-  &__container {}
-
   // .clients__label
   &__label {
     color: $grey;
@@ -230,9 +221,6 @@
   @include adaptiveValue("padding-top", 100, 30);
   @include adaptiveValue("padding-bottom", 75, 30);
 
-  // .gallery__container
-  &__container {}
-
   // .gallery__title
   &__title {
     @include adaptiveValue("margin-bottom", 150, 30);
@@ -247,9 +235,6 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-
-  // .gallery__item
-  &__item {}
 }
 
 .item-gallery {
@@ -395,16 +380,10 @@
   @include adaptiveValue("padding-top", 70, 30);
   @include adaptiveValue("padding-bottom", 150, 30);
 
-  // .careers__container
-  &__container {}
-
   // .careers__title
   &__title {
     @include adaptiveValue("margin-bottom", 150, 30);
   }
-
-  // .careers__table
-  &__table {}
 }
 
 .table {

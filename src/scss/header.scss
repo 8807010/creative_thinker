@@ -43,9 +43,6 @@
     transform: rotate(30deg);
   }
 
-  // .header__menu
-  &__menu {}
-
   // .header__button
   &__button {
     position: relative;
@@ -58,9 +55,6 @@
   align-items: center;
   flex: 1 1 auto;
   padding: 0px 0px 0px rem(10);
-
-  // .menu__icon
-  &__icon {}
 
   // .menu__body
   &__body {
@@ -144,8 +138,6 @@
   }
 }
 
-.icon-menu {}
-
 //====================================================================================================
 
 //Burger
@@ -190,9 +182,6 @@
       span {
         width: 0;
       }
-
-      &::before,
-      &::after {}
 
       &::before {
         top: calc(50% - rem(1));
