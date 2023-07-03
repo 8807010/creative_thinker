@@ -133,6 +133,7 @@
   &__items {
     flex: 1 1 auto;
     display: grid;
+    align-items: start;
     @include adaptiveValue("padding", 50, 20);
     grid-template-columns: repeat(2, 1fr);
     @include adaptiveValue("gap", 68, 20);
@@ -335,5 +336,128 @@
     line-height: math.div(20, 14);
   }
 }
+
+//========================================================================================================================================================
+.advantages {
+  @include adaptiveValue("padding-top", 75, 30);
+  @include adaptiveValue("padding-bottom", 75, 30);
+
+  // .advantages__container
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    @include adaptiveValue("column-gap", 60, 20);
+    row-gap: rem(40);
+  }
+
+  // .advantages__item
+  &__item {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  // .advantages__icon
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eef2ff;
+    border-radius: 6px;
+    width: rem(140);
+    height: rem(140);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 20);
+    }
+  }
+
+  // .advantages__title
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 30, 24);
+    line-height: math.div(36, 30);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 10);
+    }
+  }
+
+  // .advantages__text
+  &__text {
+    color: $grey;
+    line-height: math.div(28, 18);
+  }
+}
+
+//========================================================================================================================================================
+.careers {
+  @include adaptiveValue("padding-top", 70, 30);
+  @include adaptiveValue("padding-bottom", 150, 30);
+
+  // .careers__container
+  &__container {}
+
+  // .careers__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 150, 30);
+  }
+
+  // .careers__table
+  &__table {}
+}
+
+.table {
+  color: $grey;
+
+  @media (max-width: em(750)) {
+    overflow: auto;
+  }
+
+  // .table__item
+  &__item {
+    width: 100%;
+    min-width: rem(750);
+    border-collapse: collapse;
+  }
+
+  // .table__row
+  &__row {
+    &:not(:last-child) {
+
+      .table__title,
+      .table__cell {
+        @include adaptiveValue("padding-bottom", 80, 15);
+      }
+    }
+  }
+
+  // .table__title
+  &__title {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: rem(16);
+    line-height: math.div(24, 16);
+    font-weight: 500;
+
+    &:not(:last-child) {
+      padding-right: rem(15);
+    }
+  }
+
+  // .table__cell
+  &__cell {
+    span {
+      font-weight: 600;
+      color: $mainColor;
+    }
+
+    &:not(:last-child) {
+      padding-right: rem(15);
+    }
+  }
+}
+
+
 
 //====================================================================================================
