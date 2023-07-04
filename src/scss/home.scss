@@ -239,6 +239,7 @@
 
 .item-gallery {
   position: relative;
+  overflow: hidden;
 
   &_row-2 {
     grid-row: span 2;
@@ -260,6 +261,10 @@
         visibility: visible;
         opacity: 1;
       }
+
+      .item-gallery__image-ibg {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -267,6 +272,7 @@
   &__image-ibg {
     padding: 0px 0px percent(464, 620) 0px;
     height: 100%;
+    transition: all 0.3s ease 0s;
 
     @media (max-width: $mobile) {
       padding: 0px 0px percent(620, 620) 0px;
